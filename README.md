@@ -18,10 +18,14 @@ This will create a minified version of the 3DS 2.0 SDK, named based on the curre
 
 This file can then be included in your webpage via a ```<script>``` tag:
 
-```<script src="..path-to-SDK/threedsSDK.0.9.5.js"></script>```
+```
+<script src="..path-to-SDK/threedsSDK.0.9.5.js"></script>
+```
+
+A global variable ```window.threedsSDK``` will be available, allowing access to the SDK methods.
 
 ##### Approach 2
-Import threedsSDK directly from the cloned repo
+Import threedsSDK directly from the cloned repo:
 ```
 import threedsSDK from 'adyen-3ds2-js';
 ```
