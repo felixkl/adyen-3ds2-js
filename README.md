@@ -1,4 +1,4 @@
-# 3DS2 Web SDK
+# 3DS2 JS SDK
 With this SDK, you can accept 3D Secure 2.0 payments via Adyen. This SDK helps you with the management of the 3DS 2.0 challenges. This happens in the form of the creation of `<iframes>`, form `POSTS` using these `<iframes>` and handling the returned 3DS 2.0 results.
 
 
