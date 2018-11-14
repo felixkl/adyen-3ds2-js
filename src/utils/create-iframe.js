@@ -24,11 +24,11 @@ const addIframeListener = (iframe, callback, container) => {
  * @param container {HTMLElement} - the container to place the iframe onto, defaults to document body
  * @param name {String} - the action for the form element
  * @param containerId {String} - the ID to place on the iframe
- * @param height {String} - the height of the iframe, defaults to 0
  * @param width {String} - the width of the iframe, defaults to 0
+ * @param height {String} - the height of the iframe, defaults to 0
  * @param callback { Function } - optional, the callback to fire after the iframe has been loaded
  */
-const createIframe = (container, name, containerId, height = '0', width = '0', callback) => {
+const createIframe = (container, name, containerId, width = '0', height = '0', callback) => {
 
     return new Promise(resolve => {
 
@@ -46,8 +46,8 @@ const createIframe = (container, name, containerId, height = '0', width = '0', c
             const iframeHTML = '<html><body></body></html>';
 
             iframe.classList.add(name + 'Class');
-            iframe.height = height;
             iframe.width = width;
+            iframe.height = height;
             iframe.name = name;
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('border', '0');
@@ -56,6 +56,8 @@ const createIframe = (container, name, containerId, height = '0', width = '0', c
             // 2. Add iframe to container and return it
             const methodIframeContainer = document.createElement('div');
             methodIframeContainer.setAttribute('id', containerId);
+            methodIframeContainer.style.width = 0;
+            methodIframeContainer.style.height = 0;
 
             if (configObject.container !== undefined) {
 

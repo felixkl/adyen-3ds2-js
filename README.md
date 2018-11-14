@@ -19,7 +19,7 @@ This will create a minified version of the 3DS 2.0 SDK, named based on the curre
 This file can then be included in your webpage via a ```<script>``` tag:
 
 ```
-<script src="..path-to-SDK/threedsSDK.0.9.5.js"></script>
+<script src="..path-to-SDK/threedsSDK.0.9.6.js"></script>
 ```
 
 A global variable ```window.threedsSDK``` will be available, allowing access to the SDK methods.
@@ -31,7 +31,7 @@ import threedsSDK from 'adyen-3ds2-js';
 ```
 
 ## Usage
-The 3DS 2.0 SDK can be used when the payment authorisation result has `"resultCode":"ThreeDS2Method"`, as documented in the [3d-secure-2-0 server integration page](https://docs.adyen.com/developers/risk-management/3d-secure-2-0/server-integration).
+The 3DS 2.0 SDK can be used when the payment authorisation result has `"resultCode":"IdentifyShopper"`, as documented in the [3d-secure-2-0 server integration page](https://docs.adyen.com/developers/risk-management/3d-secure-2-0/server-integration).
 
 After receiving this result, take the following parameters from the `RESULT` and initialize the 3DS 2.0 SDK:
 * threeDSServerTransID = (`RESULT.additionalData.threeDSServerTransID`)
@@ -73,7 +73,7 @@ const resultObject = {
     "threeds2.threeDS2ResponseData.acsReferenceNumber":"ADYEN-ACS-SIMULATOR"
   },
   "pspReference":"9935272408535455",
-  "resultCode":"ThreeDS2Challenge"
+  "resultCode":"ChallengeShopper"
 }
 ```
 
@@ -124,7 +124,7 @@ transStatus: 'N'
 }
 ```
 
-Use these values to perform an additional call to the `/authorise3ds2` endpoint and [continue with the payment authorisaton](https://docs.adyen.com/developers/risk-management/3d-secure-2-0/server-integration#step6paymentcompletion).
+Use these values to perform an additional call to the `/authorise3ds2` endpoint and [continue with the payment authorisaton](https://docs.adyen.com/developers/3d-secure-2-0/risk-management/server-integration#step6continuewithpaymentauthorisation).
 
 ## See also
 * [Complete Documentation](https://docs.adyen.com/developers/risk-management/3d-secure-2-0/web-sdk-integration)
