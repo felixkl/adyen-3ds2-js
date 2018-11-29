@@ -124,7 +124,7 @@ transStatus: 'N'
 }
 ```
 
-Use these values to perform an additional call to the `/authorise3ds2` endpoint and [continue with the payment authorisaton](https://docs.adyen.com/developers/3d-secure-2-0/risk-management/server-integration#step6continuewithpaymentauthorisation).
+Use these values to perform an additional call to the `/authorise3ds2` endpoint and [continue with the payment authorisaton](https://docs.adyen.com/developers/risk-management/3d-secure-2-0/server-integration#step6paymentcompletion).
 
 ## See also
 * [Complete Documentation](https://docs.adyen.com/developers/risk-management/3d-secure-2-0/web-sdk-integration)
